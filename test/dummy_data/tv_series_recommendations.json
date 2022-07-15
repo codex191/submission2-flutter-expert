@@ -1,0 +1,30 @@
+{
+    "page": 1,
+    "results": [
+      {
+        "adult": false,
+        "backdrop_path": "/etoVmQauLgUnu34qlqUPlOkevZO.jpg",
+        "id": 92830,
+        "name": "Obi-Wan Kenobi",
+        "original_language": "en",
+        "original_name": "Obi-Wan Kenobi",
+        "overview": "During the reign of the Galactic Empire, former Jedi Master, Obi-Wan Kenobi, embarks on a crucial mission to confront allies turned enemies and face the wrath of the Empire.",
+        "poster_path": "/qJRB789ceLryrLvOKrZqLKr2CGf.jpg",
+        "media_type": "tv",
+        "genre_ids": [
+          10765,
+          10759,
+          18
+        ],
+        "popularity": 688.52,
+        "first_air_date": "2022-05-26",
+        "vote_average": 7.659,
+        "vote_count": 580,
+        "origin_country": [
+          "US"
+        ]
+      }
+    ],
+    "total_pages": 2,
+    "total_results": 40
+  }

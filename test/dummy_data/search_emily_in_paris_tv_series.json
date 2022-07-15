@@ -1,0 +1,27 @@
+{
+    "page": 1,
+    "results": [
+      {
+        "backdrop_path": "/iW74tZ8y2qobdpt4J9UQ71sw8q7.jpg",
+        "first_air_date": "2020-10-02",
+        "genre_ids": [
+            18,
+            35
+        ],
+        "id": 82596,
+        "name": "Emily in Paris",
+        "origin_country": [
+          "US"
+        ],
+        "original_language": "en",
+        "original_name": "Emily in Paris",
+        "overview": "When ambitious Chicago marketing exec Emily unexpectedly lands her dream job in Paris, she embraces a new life as she juggles work, friends and romance.",
+        "popularity": 45.724,
+        "poster_path": "/Ak59Y9bzykmV0wAiwKsqrbORDBo.jpg",
+        "vote_average": 8,
+        "vote_count": 835
+      }
+    ],
+    "total_pages": 2,
+    "total_results": 28
+  }
