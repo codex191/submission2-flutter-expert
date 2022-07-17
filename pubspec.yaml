@@ -28,18 +28,17 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
-  http: ^0.13.4
-  dartz: ^0.10.1
-  equatable: ^2.0.3
-  google_fonts: ^3.0.1
+  http: ^0.13.3
+  dartz: ^0.10.0-nullsafety.2
+  equatable: ^2.0.2
+  google_fonts: ^2.1.0
   flutter_rating_bar: ^4.0.0
-  cached_network_image: ^3.2.1
-  get_it: ^7.2.0
+  cached_network_image: ^3.0.0
+  get_it: ^7.1.3
   sqflite: ^2.0.0+3
-  test_cov_console: ^0.2.2
-  flutter_bloc: ^8.0.1
+  flutter_bloc: ^8.0.0-dev.1
   rxdart: ^0.27.3
-  coverage: ^1.5.0
+  coverage: ^1.0.3
   firebase_core: ^1.6.0
   firebase_crashlytics: ^2.6.3
 
@@ -57,10 +56,10 @@ dependencies:
     path: search
 
 dev_dependencies:
-  analyzer: ^2.2.0
-  mockito: ^5.2.0
+  flutter_lints: ^1.0.0
+  mockito: ^5.1.0
   build_runner: ^2.0.4
-  flutter_lints: ^2.0.0
+  bloc_test: ^9.0.0-dev.1
   flutter_test:
     sdk: flutter
 
