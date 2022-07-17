@@ -12,6 +12,7 @@ import 'package:http/http.dart' as http;
   TvSeriesRemoteDataSource,
   TvSeriesLocalDataSource,
 ], customMocks: [
-  MockSpec<http.Client>(as: #MockHttpClient)
+  MockSpec<http.Client>(as: #MockHttpClient),
+  MockSpec<SSLPinningClient>(as: #MockSSLPinningClient)
 ])
 void main() {}
