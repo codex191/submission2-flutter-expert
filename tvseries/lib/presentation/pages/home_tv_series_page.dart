@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:search/search.dart';
@@ -49,13 +50,6 @@ class _HomeTvSeriesPageState extends State<HomeTvSeriesPage> {
               },
             ),
             ListTile(
-              leading: const Icon(Icons.tv_rounded),
-              title: const Text('TV Series'),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
                 leading: const Icon(Icons.save_alt),
                 title: const Text('Watchlist'),
                 onTap: () {
@@ -77,6 +71,7 @@ class _HomeTvSeriesPageState extends State<HomeTvSeriesPage> {
         actions: [
           IconButton(
             onPressed: () {
+              //FirebaseCrashlytics.instance.crash();
               Navigator.pushNamed(context, TvSeriesSearchPage.ROUTE_NAME);
             },
             icon: const Icon(Icons.search),

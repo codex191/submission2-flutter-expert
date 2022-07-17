@@ -170,5 +170,5 @@ void init() {
   locator.registerLazySingleton<DatabaseHelperTvSeries>(() => DatabaseHelperTvSeries());
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton<SSLPinningClient>(() => SSLPinningClient());
 }
