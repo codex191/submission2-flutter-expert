@@ -19,13 +19,13 @@ void main() {
   final tvSeries = <TvSeries>[];
 
   test('should get list of tv series recommendations from the repository',
-          () async {
-        // arrange
-        when(mockTvSeriesRepo.getTvSeriesRecommendations(tvsId))
-            .thenAnswer((_) async => Right(tvSeries));
-        // act
-        final result = await usecase.execute(tvsId);
-        // assert
-        expect(result, Right(tvSeries));
-      });
+    () async {
+  // arrange
+   when(mockTvSeriesRepo.getTvSeriesRecommendations(tvsId))
+      .thenAnswer((_) async => Right(tvSeries));
+  // act
+  final result = await usecase.execute(tvsId);
+  // assert
+  expect(result, Right(tvSeries));
+});
 }

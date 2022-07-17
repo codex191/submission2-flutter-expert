@@ -5,11 +5,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:watchlist/watchlist.dart';
-// ignore: depend_on_referenced_packages
 import 'package:mocktail/mocktail.dart';
+
 import '../../dummy_data/dummy_objects.dart';
 import '.././../helpers/test_page_helper.dart';
-// ignore: unused_import
 import 'movie_detail_pages_test.mocks.dart';
 
 @GenerateMocks([MovieDetailBloc])
@@ -154,7 +153,7 @@ void main() {
     expect(watchlistButtonIcon, findsOneWidget);
   });
 
-  testWidgets('should show circular progress when movie recom is loading',
+  testWidgets('should show circular progress when movie recommendation is loading',
       (tester) async {
     when(() => fakeMovieBloc.state)
         .thenReturn(MovieDetailHasData(testMovieDetail));
@@ -169,7 +168,7 @@ void main() {
     expect(find.byType(CircularProgressIndicator), findsNWidgets(2));
   });
 
-  testWidgets('should show ListView ClipRReact when movie recom is has data',
+  testWidgets('should show ListView ClipRReact when movie recommendation is has data',
       (tester) async {
     when(() => fakeMovieBloc.state)
         .thenReturn(MovieDetailHasData(testMovieDetail));

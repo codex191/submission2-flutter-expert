@@ -8,12 +8,12 @@ import '../../dummy_data/dummy_objects.dart';
 import '../../helpers/page_helper_test.dart';
 
 void main() {
-  late FakeTvSeriesTopBloc fakeBloc;
+  late FakeTvSeriesTopRatedBloc fakeBloc;
 
   setUp(() {
-    registerFallbackValue(FakeTvSeriesTopEvent());
-    registerFallbackValue(FakeTvSeriesTopState());
-    fakeBloc = FakeTvSeriesTopBloc();
+    registerFallbackValue(FakeTvSeriesTopRatedEvent());
+    registerFallbackValue(FakeTvSeriesTopRatedState());
+    fakeBloc = FakeTvSeriesTopRatedBloc();
   });
 
   Widget _createTestableWidget(Widget body) {

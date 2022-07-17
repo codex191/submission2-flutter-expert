@@ -3,8 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie/movie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-// ignore: depend_on_referenced_packages
 import 'package:mocktail/mocktail.dart';
+
+
 import '.././../helpers/test_page_helper.dart';
 import '../../dummy_data/dummy_objects.dart';
 import 'movie_detail_pages_test.dart';

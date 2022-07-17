@@ -11,7 +11,7 @@ import '../../dummy_data/dummy_objects.dart';
 void main() {
   late FakeTvSeriesDetailBloc fakeTvSeriesBloc;
   late FakeTvSeriesWatchlistBloc fakeWatchlistBloc;
-  late FakeTvSeriesRecomBloc fakeRecommendationBloc;
+  late FakeTvSeriesRecommendatioBloc fakeRecommendationBloc;
 
   setUpAll(() {
     registerFallbackValue(FakeTvSeriesDetailEvent());
@@ -22,9 +22,9 @@ void main() {
     registerFallbackValue(FakeTvSeriesWatchlistState());
     fakeWatchlistBloc = FakeTvSeriesWatchlistBloc();
 
-    registerFallbackValue(FakeTvSeriesRecomEvent());
-    registerFallbackValue(FakeTvSeriesRecomState());
-    fakeRecommendationBloc = FakeTvSeriesRecomBloc();
+    registerFallbackValue(FakeTvSeriesRecommendationEvent());
+    registerFallbackValue(FakeTvSeriesRecommendatioState());
+    fakeRecommendationBloc = FakeTvSeriesRecommendatioBloc();
   });
 
   Widget _makeTestableWidget(Widget body) {
@@ -75,7 +75,6 @@ void main() {
       (tester) async {
     when(() => fakeTvSeriesBloc.state).thenReturn(TvSeriesDetailLoading());
     when(() => fakeRecommendationBloc.state).thenReturn(TvSeriesRecommendationLoading());
-
     when(() => fakeWatchlistBloc.state)
         .thenReturn(TvSeriesIsAddedToWatchlist(false));
 
@@ -89,8 +88,7 @@ void main() {
       (tester) async {
     when(() => fakeTvSeriesBloc.state).thenReturn(TvSeriesDetailError('error'));
     when(() => fakeRecommendationBloc.state).thenReturn(TvSeriesRecommendationLoading());
-    when(() => fakeWatchlistBloc.state)
-        .thenReturn(TvSeriesIsAddedToWatchlist(false));
+    when(() => fakeWatchlistBloc.state).thenReturn(TvSeriesIsAddedToWatchlist(false));
 
     await tester.pumpWidget(
         _makeTestableWidget(TvSeriesDetailPage(id: testTvSeriesDetail.id)));
@@ -139,4 +137,46 @@ void main() {
 
     expect(watchlistButtonIcon, findsOneWidget);
   });
+}
+
+class FakeHome extends StatelessWidget {
+  const FakeHome({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListTile(
+        key: const Key('fakeHome'),
+        onTap: () {
+          Navigator.pushNamed(context, '/next');
+        },
+      ),
+      appBar: AppBar(
+        title: const Text('fakeHome'),
+        leading: const Icon(Icons.menu),
+      ),
+    );
+  }
+}
+
+class FakeDestination extends StatelessWidget {
+  const FakeDestination({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: ListTile(
+        key: const Key('fakeDestination'),
+        onTap: () {
+          Navigator.pop(context);
+        },
+        title: const Text('fake Destination'),
+        leading: const Icon(Icons.check),
+      ),
+    );
+  }
 }

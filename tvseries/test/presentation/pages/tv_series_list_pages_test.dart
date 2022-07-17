@@ -10,7 +10,7 @@ import '../../dummy_data/dummy_objects.dart';
 void main() {
   late FakeTvSeriesListBloc fakeTVSeriesListBloc;
   late FakeTvSeriesPopularBloc fakeTVSeriesPopularBloc;
-  late FakeTvSeriesTopBloc fakeTVSeriesTopBloc;
+  late FakeTvSeriesTopRatedBloc fakeTVSeriesTopBloc;
 
   setUp(() {
     registerFallbackValue(FakeTvSeriesListEvent());
@@ -21,9 +21,9 @@ void main() {
     registerFallbackValue(FakeTvSeriesPopularState());
     fakeTVSeriesPopularBloc = FakeTvSeriesPopularBloc();
 
-    registerFallbackValue(FakeTvSeriesTopEvent());
-    registerFallbackValue(FakeTvSeriesTopState());
-    fakeTVSeriesTopBloc = FakeTvSeriesTopBloc();
+    registerFallbackValue(FakeTvSeriesWatchlistEvent());
+    registerFallbackValue(FakeTvSeriesWatchlistState());
+    fakeTVSeriesTopBloc = FakeTvSeriesTopRatedBloc();
 
     TestWidgetsFlutterBinding.ensureInitialized();
   });
