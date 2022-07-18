@@ -41,6 +41,7 @@ dependencies:
   coverage: ^1.0.3
   firebase_core: ^1.6.0
   firebase_crashlytics: ^2.6.3
+  test_cov_console: ^0.2.2
 
   core:
     path: core

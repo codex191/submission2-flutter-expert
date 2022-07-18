@@ -18,6 +18,7 @@ dependencies:
   dartz: ^0.10.1
   firebase_core: ^1.17.1
   firebase_crashlytics: ^2.8.1
+  test_cov_console: ^0.2.2
 
   core:
     path: ../core
